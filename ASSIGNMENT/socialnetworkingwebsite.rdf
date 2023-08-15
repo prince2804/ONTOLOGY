@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4/"
+     xml:base="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasComment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasComment">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Post"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Comment"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasFriend -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasFriend">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasImage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasImage">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Post"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#ImagePost"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasPost -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasPost">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Post"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasProfile">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Profile"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasVideo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasVideo">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Post"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#VideoPost"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasBio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasBio">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Profile"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasBirthdate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasBirthdate">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasCaption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasCaption">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#ImagePost"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasEducation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasEducation">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Profile"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasEmail">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasFirstName">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasGender">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasLastName">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasLocation">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Profile"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasOccupation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasOccupation">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Profile"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasPassword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasPassword">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasProfilePicture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasProfilePicture">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Profile"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasText">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#TextPost"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasTimestamp">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Post"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasUsername -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#hasUsername">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Comment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Comment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#FriendList -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#FriendList"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#ImagePost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#ImagePost"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Post -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Post"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#Profile"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#TextPost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#TextPost"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#User"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#VideoPost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/3/untitled-ontology-4#VideoPost"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

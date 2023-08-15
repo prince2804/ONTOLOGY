@@ -1,0 +1,231 @@
+ <!--
+ This DTD defines a social networking website with a root element social_networking_website that contains one or more user elements. Each user element has required attributes id, username, password, and email, and optional attributes first_name, last_name, gender, birthdate, and profile_picture.
+
+Each user element contains a profile element with optional attributes location, education, and occupation, and an optional bio element. The friends element contains zero or more user elements representing the user's friends.
+
+Each user element also contains an optional posts element with one or more post elements. Each post element has required attributes id and timestamp and contains a required text element and optional image, video, and comments elements. The image and video elements have an optional caption attribute, and the comments element contains one or more comment elements with required attributes id and timestamp. The text and comment elements contain text content.
+-->
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE social_networking_website [
+    <!ELEMENT social_networking_website (user+)>
+    <!ELEMENT user (profile, friends, posts?)>
+    <!ATTLIST user
+      id ID #REQUIRED
+      username CDATA #REQUIRED
+      password CDATA #REQUIRED
+      email CDATA #REQUIRED
+      first_name CDATA #IMPLIED
+      last_name CDATA #IMPLIED
+      gender (male|female|other) "other"
+      birthdate CDATA #IMPLIED
+      profile_picture CDATA #IMPLIED
+    >
+    <!ELEMENT profile (bio?)>
+    <!ATTLIST profile
+      location CDATA #IMPLIED
+      education CDATA #IMPLIED
+      occupation CDATA #IMPLIED
+    >
+    <!ELEMENT bio (#PCDATA)>
+    <!ELEMENT friends (user*)>
+    <!ELEMENT posts (post+)>
+    <!ELEMENT post (text, image?, video?, comments?)>
+    <!ATTLIST post
+      id ID #REQUIRED
+      timestamp CDATA #REQUIRED
+    >
+    <!ELEMENT text (#PCDATA)>
+    <!ELEMENT image (#PCDATA)>
+    <!ATTLIST image
+      caption CDATA #IMPLIED
+    >
+    <!ELEMENT video (#PCDATA)>
+    <!ATTLIST video
+      caption CDATA #IMPLIED
+    >
+    <!ELEMENT comments (comment+)>
+    <!ELEMENT comment (#PCDATA)>
+    <!ATTLIST comment
+      id ID #REQUIRED
+      timestamp CDATA #REQUIRED
+    >
+  ]>
+
+  <social_networking_website>
+    <user id="u001" username="john_doe" password="password123" email="johndoe@example.com" first_name="John" last_name="Doe" gender="male" birthdate="1990-01-01" profile_picture="https://example.com/johndoe.jpg">
+      <profile location="New York, NY" education="Bachelor of Science in Computer Science" occupation="Software Engineer">
+        <bio>Hi, I'm John and I love programming!</bio>
+      </profile>
+      <friends>
+        <user id="u002"/>
+        <user id="u005"/>
+      </friends>
+      <posts>
+        <post id="p001" timestamp="2022-02-01T08:00:00Z">
+          <text>Just started my new job at XYZ Company!</text>
+        </post>
+        <post id="p002" timestamp="2023-02-10T12:30:00Z">
+          <image caption="My view from the top of the Empire State Building">https://example.com/empirestate.jpg</image>
+        </post>
+        <post id="p003" timestamp="2022-03-01T18:00:00Z">
+          <text>Happy birthday to me!</text>
+          <image caption="Birthday cake">https://example.com/birthdaycake.jpg</image>
+        </post>
+      </posts>
+    </user>
+    <user id="u002" username="jane_smith" password="password456" email="janesmith@example.com" first_name="Jane" last_name="Smith" gender="female" birthdate="1995-05-15" profile_picture="https://example.com/janesmith.jpg">
+      <profile location="Los Angeles, CA" education="Bachelor of Arts in Psychology" occupation="Therapist">
+        <bio>I'm a licensed therapist and I love helping people!</bio>
+      </profile>
+      <friends>
+        <user id="u001"/>
+        <user id="u003"/>
+        <user id="u006"/>
+      </friends>
+      <posts>
+        <post id="p004" timestamp="2022-02-14T10:00:00Z">
+          <image caption="Happy Valentine's Day!">https://example.com/valentinesday.jpg</image>
+        </post>
+        <post id="p005" timestamp="2023-03-05T16:45:00Z">
+          <video caption="My cat doing tricks">https://example.com/catvideo.mp4</video>
+        </post>
+      </posts>
+    </user>
+    <user id="u003" username="ashay_shah" password="gjeh*j" email="ashay@gmail.com" first_name="Aashay" last_name="Shah" gender="male" birthdate="2000-03-30" profile_picture="https://tinyjpg.com/images/social/website.jpg">
+      <profile location="Gujrat, Rajkot" education="BTech" occupation="Student">
+        <bio>I'm a student</bio>
+      </profile>
+      <friends>
+        <user id="u002"/>
+        <user id="u004"/>
+        <user id="u006"/>
+      </friends>
+      <posts>
+        <post id="p004" timestamp="2022-03-28T10:00:00Z">
+          <image caption="At the beach">https://thumbs.dreamstime.com/b/sunrise-over-beach-cancun-beautiful-mexico-40065727.jpg</image>
+        </post>
+        <post id="p005" timestamp="2023-05-05T16:45:00Z">
+          <video caption="My dog doing tricks">https://pixabay.com/videos/puppy-dog-playful-beach-sand-play-4740/</video>
+        </post>
+      </posts>
+    </user>
+    <user id="u004" username="prince_patel" password="password456" email="price@gmail.com" first_name="Prince" last_name="Patel" gender="male" birthdate="1999-05-15" profile_picture="https://img.freepik.com/free-vector/prince-cartoon-character-sticker_1308-71344.jpg?w=2000">
+      <profile location="Gujrat, Bhuj" education="MBA" occupation="Bussinessmen">
+        <bio>DM for bussiness enquiries</bio>
+      </profile>
+      <friends>
+        <user id="u010"/>
+        <user id="u009"/>
+      </friends>
+      <posts>
+        <post id="p006" timestamp="2022-08-28T11:00:00Z">
+          <image caption="At the shop">https://i.pinimg.com/736x/06/ac/db/06acdb2259ca7692c58fd3f335648c2e--men-formal-shop-displays.jpg</image>
+        </post>
+        <post id="p007" timestamp="2023-08-05T17:45:00Z">
+          <video caption="Work mode on">https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcT0q8QpIAmsmunw-Bd_APSjYBhKdoBa-K7vSg</video>
+        </post>
+      </posts>
+    </user>
+    <user id="u005" username="yash_rathore" password="jaklhrteu" email="yash@example.com" first_name="Yash" last_name="Rathore" gender="male" birthdate="1999-01-14" profile_picture="https://wallpaperaccess.com/full/4723250.jpg">
+      <profile location="Los Angeles, CA" education="Bachelor of Arts in Psychology" occupation="Therapist">
+        <bio>I'm a licensed therapist and I love helping people!</bio>
+      </profile>
+      <friends>
+        <user id="u001"/>
+      </friends>
+      <posts>
+        <post id="p008" timestamp="2022-11-09T22:00:00Z">
+          <image caption="Blah blah">https://ik.imagekit.io/ikmedia/backlit.jpg</image>
+        </post>
+        <post id="p009" timestamp="2023-07-05T08:45:00Z">
+          <video caption="Have a look at this video">https://archive.org/details/SampleVideo1280x7205mb</video>
+        </post>
+      </posts>
+    </user>
+    <user id="u006" username="ravi_v" password="jalkjt34" email="ravi@gmail.com" first_name="Ravi" last_name="Vishwakarma" gender="male" birthdate="1999--12-10" profile_picture="https://upload.wikimedia.org/wikipedia/commons/8/87/Smiley_Face.JPG">
+      <profile location="MP, Indore" education="MTech" occupation="Student">
+        <bio>Hehehehehehe</bio>
+      </profile>
+      <friends>
+        <user id="u003"/>
+        <user id="u007"/>
+      </friends>
+      <posts>
+        <post id="p010" timestamp="2023-07-27T18:00:00Z">
+          <image caption="Having fun">https://www.brisbane.qld.gov.au/sites/default/files/styles/hero_image/public/images/2022-05/1600x900-city-skyline_0.jpg.webp?itok=IzSQ-MY_</image>
+        </post>
+        <post id="p011" timestamp="2023-09-10T06:45:00Z">
+          <video caption="Video">https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRohJok74B_Ph1yVeWi7hF0fPD7bWeNpDU15Q</video>
+        </post>
+      </posts>
+    </user>
+    <user id="u007" username="vijay_yadav" password="dag56" email="vijay@example.com" first_name="Vijay" last_name="yadav" gender="male" birthdate="1998-05-15" profile_picture="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg">
+      <profile location="Bhopal,MP" education="Bachelor of Arts" occupation="singer">
+        <bio>Singer</bio>
+      </profile>
+      <friends>
+        <user id="u006"/>
+        <user id="u004"/>
+      </friends>
+      <posts>
+        <post id="p012" timestamp="2023-07-19T09:00:00Z">
+          <image caption="Nothing">https://ik.imagekit.io/ikmedia/backlit.jpg.jpg</image>
+        </post>
+        <post id="p013" timestamp="2023-05-20T19:45:00Z">
+          <video caption="Have a look">https://mixkit.co/free-stock-video/dog/</video>
+        </post>
+      </posts>
+    </user>
+    <user id="u008" username="kuldeep" password="dagte" email="kd@gmail.com" first_name="Kuldeep" last_name="Yadav" gender="male" birthdate="1996-05-15" profile_picture="https://i.pinimg.com/474x/0e/38/66/0e3866c3be7dacea85ade553b5eac877--fun-art-jpg.jpg">
+      <profile location="Varanasi, UP" education="Btech" occupation="Designer">
+        <bio>I'm a desinger!</bio>
+      </profile>
+      <friends>
+        <user id="u009"/>
+        <user id="u007"/>
+      </friends>
+      <posts>
+        <post id="p014" timestamp="2022-03-30T01:00:00Z">
+          <image caption="Photos">https://cdn.cnn.com/cnnnext/dam/assets/160322105353-bugatti-chiron-next-fastest-car-orig-00001230-large-169.jpg</image>
+        </post>
+        <post id="p015" timestamp="2023-03-22T13:45:00Z">
+          <video caption="Coooool">http://thinkingform.com/video-sample-mp4/</video>
+        </post>
+      </posts>
+    </user>
+    <user id="u009" username="tarun" password="gatg456" email="tarun@example.com" first_name="Tarun" last_name="Chandel" gender="male" birthdate="1999-07-15" profile_picture="https://i.pinimg.com/474x/0e/38/66/0e3866c3be7dacea85ade553b5eac877--fun-art-jpg.jpg">
+      <profile location="Chennai, TN" education="SSC" occupation="Student">
+        <bio>I'm a student of 12th class!</bio>
+      </profile>
+      <friends>
+        <user id="u001"/>
+        <user id="u002"/>
+        <user id="u004"/>
+      </friends>
+      <posts>
+        <post id="p016" timestamp="2022-06-18T15:00:00Z">
+          <image caption="Haha">https://i.pinimg.com/474x/0e/38/66/0e3866c3be7dacea85ade553b5eac877--fun-art-jpg.jpg</image>
+        </post>
+        <post id="p017" timestamp="2022-07-12T13:45:00Z">
+          <video caption="Awwww">https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRE7rFmEGGpeblqeugZCovuTcMPPt8gelISNw</video>
+        </post>
+      </posts>
+    </user>
+    <user id="u010" username="deepika" password="sgas56" email="deepika@example.com" first_name="Deepika" last_name="jat" gender="female" birthdate="2000-07-27" profile_picture="https://ik.imagekit.io/ikmedia/backlit.jpg">
+      <profile location="Badmer, Rajasthan" education="MBBS" occupation="Doctor">
+        <bio>I'm a licensed doctor!</bio>
+      </profile>
+      <friends>
+        <user id="u005"/>
+        <user id="u002"/>
+      </friends>
+      <posts>
+        <post id="p018" timestamp="2022-09-13T18:00:00Z">
+          <image caption="My car!">https://example.com/car.jpg</image>
+        </post>
+        <post id="p019" timestamp="2023-04-10T15:00:00Z">
+          <video caption="Heres a video">https://example.com/myvideo.mp4</video>
+        </post>
+      </posts>
+    </user>
+    </social_networking_website>
